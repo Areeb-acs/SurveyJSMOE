@@ -4,7 +4,7 @@ import { Survey } from "survey-react-ui";
 import "survey-core/defaultV2.min.css";
 import { themeJson } from "./theme";
 import "./index.css";
-import { json as surveyData } from "./Json"; // Ensure the correct path and casing
+import { json as surveyData } from "./json"; // Ensure the correct path and casing
 import "./custom.css";  // Import the custom CSS file
 
 
