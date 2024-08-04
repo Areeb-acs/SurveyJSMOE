@@ -2,6 +2,7 @@ export const themeJson = {
   "themeName": "default",
   "colorPalette": "light",
   "isPanelless": false,
+
   "backgroundImageAttachment": "fixed",
   "backgroundImage": "",
   "backgroundOpacity": 1,
@@ -94,8 +95,8 @@ export const themeJson = {
     "height": 375,
     "inheritWidthFrom": "survey",
     "textAreaWidth": 500,
-    "backgroundImage": "https://api.surveyjs.io/private/Surveys/files?name=e983675e-eedb-43cd-bf20-6ad63d5b6c30[objectObject]",
-    "logoPositionY": "middle",
+    "backgroundImage": "https://api.surveyjs.io/private/Surveys/files?name=e983675e-eedb-43cd-bf20-6ad63d5b6c30[object Object]",
+    "logoPositionY": "top",
     "titlePositionY": "top",
     "descriptionPositionY": "top"
   },

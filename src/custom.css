@@ -1,0 +1,30 @@
+/* custom.css */
+.survey-title-right {
+    text-align: right !important;
+}
+
+.survey-input-right {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* Align survey item numbers to the right */
+.sv-string-viewer .sv-string-viewer__text {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.sv-ranking__item--selected {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.sv-container-modern .sv-question__title {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.sv-ranking__control .sv-ranking__control-number {
+    direction: rtl !important;
+    text-align: right !important;
+}

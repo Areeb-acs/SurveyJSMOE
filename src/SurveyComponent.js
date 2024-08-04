@@ -1,22 +1,45 @@
-// SurveyComponent.js
 import React from "react";
-import { Model } from "survey-core";
+import { Model, surveyLocalization } from "survey-core";
 import { Survey } from "survey-react-ui";
 import "survey-core/defaultV2.min.css";
 import { themeJson } from "./theme";
 import "./index.css";
-import { json } from "./json";
+import { json as surveyData } from "./Json"; // Ensure the correct path and casing
+import "./custom.css";  // Import the custom CSS file
+
 
 function SurveyComponent() {
     const surveyJson = {
-        "surveyId": "f107e3c1-8c03-4f13-b258-b6688f00cdc0",
         "surveyPostId": "4535b0cb-799a-4672-a8c1-8028575efb4e",
-        "surveyShowDataSaving": true,
-        ...json
+        ...surveyData,
+
     };
 
+    // Set the default locale to Arabic
+    surveyLocalization.defaultLocale = "ar";
+
+    // Add Arabic translations
+    surveyLocalization.locales["ar"] = {
+        pagePrevText: "السابق",
+        pageNextText: "التالي",
+        completeText: "إنهاء",
+        otherItemText: "أخرى (يرجى التحديد)",
+        progressText: "الصفحة {0} من {1}",
+        emptySurvey: "لا توجد صفحة مرئية أو سؤال في الاستبيان.",
+        completingSurvey: "!شكراً لك على إكمال الاستبيان",
+        loadingSurvey: "جار تحميل الاستبيان...",
+        optionsCaption: "اختر...",
+        requiredError: "الرجاء الإجابة على السؤال.",
+        requiredErrorFormat: "الرجاء إدخال التنسيق الصحيح.",
+        numericError: "يجب أن تكون القيمة رقمية.",
+        // Add more translations as needed
+    };
     const survey = new Model(surveyJson);
+
     survey.applyTheme(themeJson);
+
+    // Set the locale for this specific survey
+    survey.locale = "ar";
 
     survey.onComplete.add((sender, options) => {
         const xhr = new XMLHttpRequest();
