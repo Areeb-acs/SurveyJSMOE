@@ -22,15 +22,15 @@ function SurveyComponent() {
             @media (min-width: 620px) {
                 h3.sd-title {
                     position: relative;
-                    left: -50%;
+                    left: -57%;
                 }
                 .sd-description {
                     position: relative;
-                    left: -50%;
+                    left: -57%;
                 }
                 .sd-logo {
                     position: relative;
-                    left: -90%;
+                    left: -100%;
                     top: -25%;
                 }
             }

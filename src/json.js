@@ -14,7 +14,7 @@ export const json = {
   "pages": [
     {
       "name": "page1",
-      "description": "\n",
+      "description": "",
       "elements": [
         {
           "type": "html",
