@@ -9,7 +9,7 @@ export const json = {
     "default": "https://api.surveyjs.io/private/Surveys/files?name=0f5693c5-6053-4b90-9d9a-d4ed0ef9b611",
     "ar": "https://api.surveyjs.io/private/Surveys/files?name=0f5693c5-6053-4b90-9d9a-d4ed0ef9b611"
   },
-  "logoWidth": "120px",
+  "logoWidth": "130px",
   
   "pages": [
     {
