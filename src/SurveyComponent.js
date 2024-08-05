@@ -5,7 +5,6 @@ import "survey-core/defaultV2.min.css";
 import { themeJson } from "./theme";
 import "./index.css";
 import { json as surveyData } from "./json"; // Ensure the correct path and casing
-import "./custom.css";  // Import the custom CSS file
 
 
 function SurveyComponent() {
@@ -40,6 +39,14 @@ function SurveyComponent() {
 
     // Set the locale for this specific survey
     survey.locale = "ar";
+    // Apply custom CSS for the completion message
+    survey.onComplete.add((sender) => {
+        const completionMessage = document.querySelector(".sv_complete_text");
+        if (completionMessage) {
+            completionMessage.classList.add("completion-message");
+        }
+    });
+
 
     survey.onComplete.add((sender, options) => {
         const xhr = new XMLHttpRequest();

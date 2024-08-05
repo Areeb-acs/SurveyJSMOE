@@ -19,7 +19,7 @@ export const json = {
           "type": "html",
           "name": "question7",
           "html": {
-            "ar": "<h4 style=\"color:white;\">طريقة عمل الاستبيان</h4>\n\n<p> <a href=\"https://drive.google.com/file/d/14vZoGRTfkqFEG4n780I5Jheqw0JU01E-/view\" target=\"_blank\" style=\"color: #d3d3d3;\">اضغط هنا لمشاهدة الفيديو التوضيحي للاستبيان</a> </p>"
+            "ar": "<h4 style=\"color:white;\">طريقة عمل الاستبيان</h4>\n\n<p style='font-size:19px;'> <a href=\"https://drive.google.com/file/d/14vZoGRTfkqFEG4n780I5Jheqw0JU01E-/view\" target=\"_blank\" style=\"color: #d3d3d3;\">اضغط هنا لمشاهدة الفيديو التوضيحي للاستبيان</a> </p>"
           }
         },
         {
@@ -300,5 +300,11 @@ export const json = {
         }
       ]
     }
-  ]
+  ],
+  
+  "completedHtml": "<div style='font-size:35px; font-weight: bold; color: white;'>!شكراً لك على إكمال الاستبيان</div>",
+  showQuestionNumbers: "off",
+  questionTitleLocation: "top",
+  questionErrorLocation: "bottom"
+
 }

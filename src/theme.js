@@ -2,7 +2,6 @@ export const themeJson = {
   "themeName": "default",
   "colorPalette": "light",
   "isPanelless": false,
-
   "backgroundImageAttachment": "fixed",
   "backgroundImage": "",
   "backgroundOpacity": 1,
@@ -89,7 +88,9 @@ export const themeJson = {
     "--sjs-primary-forecolor": "rgba(255, 255, 255, 1)",
     "--sjs-primary-forecolor-light": "rgba(255, 255, 255, 0.25)",
     "--sjs-special-red": "rgba(229, 10, 62, 1)",
-    "--sjs-special-red-light": "rgba(229, 10, 62, 0.1)"
+    "--sjs-special-red-light": "rgba(229, 10, 62, 0.1)",
+    "--input-number-align-right": "text-align: right;"  // New variable for input alignment
+    
   },
   "header": {
     "height": 375,
@@ -101,4 +102,4 @@ export const themeJson = {
     "descriptionPositionY": "top"
   },
   "headerView": "advanced"
-}
+};
