@@ -6,10 +6,11 @@ export const json = {
     "ar": "نود في البداية أن نعبر عن شكرنا لتعاونكم الدائم ولتعاون ممثليكم في حصر ما تم تحقيقه لمنظومة الطاقة للعام الجاري 2024م ومستهدفاتها لعام 2025م استعداداً للإعلان عن الميزانية العامة للدولة للعام المالي 2025م.\n\nنأمل منكم تكرماً التصويت واختيار أبرز10 مما تم تحقيقه لمنظومة الطاقة في عام 2024 م وأبرز 10 مستهدفات لعام 2025م بحسب الأهمية والأولوية للوطن والمواطن تمهيداً لرفعها إلى سمو الوزير لأخذ التوجية أو الاعتماد  \n\nمع العلم أن الاستبانة ستستغرق 5 دقائق من وقتكم الثمين\n"
   },
   "logo": {
-    "default": "https://api.surveyjs.io/private/Surveys/files?name=8f0a1b92-4e10-41c4-99a8-eeca74e942cc",
-    "ar": "https://api.surveyjs.io/private/Surveys/files?name=46263e5f-046e-4b49-90ed-890f6e79a8e8"
+    "default": "https://api.surveyjs.io/private/Surveys/files?name=0f5693c5-6053-4b90-9d9a-d4ed0ef9b611",
+    "ar": "https://api.surveyjs.io/private/Surveys/files?name=0f5693c5-6053-4b90-9d9a-d4ed0ef9b611"
   },
-  "logoWidth": "200px",
+  "logoWidth": "120px",
+  
   "pages": [
     {
       "name": "page1",
@@ -301,6 +302,8 @@ export const json = {
       ]
     }
   ],
+
+  
   
   "completedHtml": "<div style='font-size:35px; font-weight: bold; color: white;'>!شكراً لك على إكمال الاستبيان</div>",
   showQuestionNumbers: "off",

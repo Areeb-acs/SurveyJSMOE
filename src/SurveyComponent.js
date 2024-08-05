@@ -1,10 +1,10 @@
 import React from "react";
-import { Model, surveyLocalization } from "survey-core";
+import { Model, surveyLocalization, StylesManager } from "survey-core";
 import { Survey } from "survey-react-ui";
 import "survey-core/defaultV2.min.css";
 import { themeJson } from "./theme";
 import "./index.css";
-import { json as surveyData } from "./json"; // Ensure the correct path and casing
+import { json as surveyData } from "./json";
 
 function SurveyComponent() {
     const surveyJson = {
@@ -12,11 +12,42 @@ function SurveyComponent() {
         ...surveyData,
         "completedHtml": "<div class='sv_complete_text'>!شكراً لك على إكمال الاستبيان</div>"
     };
+    React.useEffect(() => {
+        const style = document.createElement('style');
+        style.textContent = `
+            .sd-root-modern {
+                direction: rtl;
+            }
+    
+            @media (min-width: 620px) {
+                h3.sd-title {
+                    position: relative;
+                    left: -50%;
+                }
+                .sd-description {
+                    position: relative;
+                    left: -50%;
+                }
+                .sd-logo {
+                    position: relative;
+                    left: -90%;
+                    top: -25%;
+                }
+            }
 
-    // Set the default locale to Arabic
+            
+        `;
+        document.head.appendChild(style);
+    
+        return () => {
+            document.head.removeChild(style);
+        };
+    }, []);
+
+    StylesManager.applyTheme("defaultV2");
+
+
     surveyLocalization.defaultLocale = "ar";
-
-    // Add Arabic translations
     surveyLocalization.locales["ar"] = {
         pagePrevText: "السابق",
         pageNextText: "التالي",
@@ -30,17 +61,13 @@ function SurveyComponent() {
         requiredError: "الرجاء الإجابة على السؤال.",
         requiredErrorFormat: "الرجاء إدخال التنسيق الصحيح.",
         numericError: "يجب أن تكون القيمة رقمية.",
-        // Add more translations as needed
+        // ... (rest of your translations)
     };
 
     const survey = new Model(surveyJson);
-
     survey.applyTheme(themeJson);
-
-    // Set the locale for this specific survey
     survey.locale = "ar";
 
-    // Apply custom CSS for the completion message
     survey.onComplete.add((sender) => {
         const completionMessage = document.querySelector(".sv_complete_text");
         if (completionMessage) {
@@ -63,7 +90,7 @@ function SurveyComponent() {
         xhr.send(JSON.stringify(sender.data));
     });
 
-    return (<Survey model={survey} />);
+    return <Survey model={survey} />;
 }
 
 export default SurveyComponent;
