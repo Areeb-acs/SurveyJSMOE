@@ -14,6 +14,21 @@ code {
     monospace;
 }
 
-body {
-  text-align: right;
+/* Ensure the whole survey background is blue */
+body, .sv_body, .sv_complete, .sv-container-modern {
+  background-color: #10486c !important; /* or any shade of blue you prefer */
+  color: white !important;
+  margin: 0;
+  height: 100vh;
+ 
+}
+
+/* Center the completion message text */
+.sv_complete_text {
+  font-size: 55px !important;
+  font-weight: bold !important;
+  color: white !important;
+  text-align: center;
+  margin-top: 20%;
+  
 }

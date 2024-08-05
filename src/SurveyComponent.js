@@ -6,12 +6,11 @@ import { themeJson } from "./theme";
 import "./index.css";
 import { json as surveyData } from "./json"; // Ensure the correct path and casing
 
-
 function SurveyComponent() {
     const surveyJson = {
         "surveyPostId": "4535b0cb-799a-4672-a8c1-8028575efb4e",
         ...surveyData,
-
+        "completedHtml": "<div class='sv_complete_text'>!شكراً لك على إكمال الاستبيان</div>"
     };
 
     // Set the default locale to Arabic
@@ -33,12 +32,14 @@ function SurveyComponent() {
         numericError: "يجب أن تكون القيمة رقمية.",
         // Add more translations as needed
     };
+
     const survey = new Model(surveyJson);
 
     survey.applyTheme(themeJson);
 
     // Set the locale for this specific survey
     survey.locale = "ar";
+
     // Apply custom CSS for the completion message
     survey.onComplete.add((sender) => {
         const completionMessage = document.querySelector(".sv_complete_text");
@@ -46,7 +47,6 @@ function SurveyComponent() {
             completionMessage.classList.add("completion-message");
         }
     });
-
 
     survey.onComplete.add((sender, options) => {
         const xhr = new XMLHttpRequest();
