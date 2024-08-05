@@ -304,8 +304,6 @@ export const json = {
   ],
 
   
-  
-  "completedHtml": "<div style='font-size:35px; font-weight: bold; color: white;'>!شكراً لك على إكمال الاستبيان</div>",
   showQuestionNumbers: "off",
   questionTitleLocation: "top",
   questionErrorLocation: "bottom"

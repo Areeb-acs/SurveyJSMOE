@@ -10,7 +10,7 @@ function SurveyComponent() {
     const surveyJson = {
         "surveyPostId": "4535b0cb-799a-4672-a8c1-8028575efb4e",
         ...surveyData,
-        "completedHtml": "<div class='sv_complete_text'>!شكراً لك على إكمال الاستبيان</div>"
+        "completedHtml": "<div class='sv_complete_text'>شكراً لك على إكمال الاستبيان!</div>"
     };
     React.useEffect(() => {
         const style = document.createElement('style');
@@ -33,6 +33,8 @@ function SurveyComponent() {
                     left: -100%;
                     top: -25%;
                 }
+
+                
             }
 
             
@@ -55,7 +57,7 @@ function SurveyComponent() {
         otherItemText: "أخرى (يرجى التحديد)",
         progressText: "الصفحة {0} من {1}",
         emptySurvey: "لا توجد صفحة مرئية أو سؤال في الاستبيان.",
-        completingSurvey: "!شكراً لك على إكمال الاستبيان",
+        completingSurvey: "شكراً لك على إكمال الاستبيان!",
         loadingSurvey: "جار تحميل الاستبيان...",
         optionsCaption: "اختر...",
         requiredError: "الرجاء الإجابة على السؤال.",
