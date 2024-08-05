@@ -18,6 +18,9 @@ function SurveyComponent() {
             .sd-root-modern {
                 direction: rtl;
             }
+
+   
+
     
             @media (min-width: 620px) {
                 h3.sd-title {
@@ -34,10 +37,14 @@ function SurveyComponent() {
                     top: -25%;
                 }
 
-                
-            }
+                .sv-ranking-item,
+                .sv-ranking-item__content {
+                    padding-left: 7px !important;
+                    padding-right: 7px !important;
+                }
 
-            
+
+            }
         `;
         document.head.appendChild(style);
     
@@ -47,7 +54,6 @@ function SurveyComponent() {
     }, []);
 
     StylesManager.applyTheme("defaultV2");
-
 
     surveyLocalization.defaultLocale = "ar";
     surveyLocalization.locales["ar"] = {
