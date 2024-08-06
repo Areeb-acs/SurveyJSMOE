@@ -6,7 +6,7 @@ import { themeJson } from "./theme";
 import "./index.css";
 import { json as surveyData } from "./json";
 
-const SurveyComponent = React.memo(function SurveyComponent() {
+function SurveyComponent() {
     const surveyJson = {
         "surveyPostId": "4535b0cb-799a-4672-a8c1-8028575efb4e",
         ...surveyData,
@@ -17,9 +17,10 @@ const SurveyComponent = React.memo(function SurveyComponent() {
         style.textContent = `
             .sd-root-modern {
                 direction: rtl;
-                background-color: transparent;
-                color: white;
             }
+
+   
+
     
             @media (min-width: 620px) {
                 h3.sd-title {
@@ -35,12 +36,14 @@ const SurveyComponent = React.memo(function SurveyComponent() {
                     left: -100%;
                     top: -25%;
                 }
-    
+
                 .sv-ranking-item,
                 .sv-ranking-item__content {
                     padding-left: 7px !important;
                     padding-right: 7px !important;
                 }
+
+
             }
         `;
         document.head.appendChild(style);
@@ -96,6 +99,6 @@ const SurveyComponent = React.memo(function SurveyComponent() {
     });
 
     return <Survey model={survey} />;
-});
+}
 
 export default SurveyComponent;
