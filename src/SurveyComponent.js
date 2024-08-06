@@ -17,10 +17,9 @@ const SurveyComponent = React.memo(function SurveyComponent() {
         style.textContent = `
             .sd-root-modern {
                 direction: rtl;
+                background-color: transparent;
+                color: white;
             }
-
-   
-
     
             @media (min-width: 620px) {
                 h3.sd-title {
@@ -36,14 +35,12 @@ const SurveyComponent = React.memo(function SurveyComponent() {
                     left: -100%;
                     top: -25%;
                 }
-
+    
                 .sv-ranking-item,
                 .sv-ranking-item__content {
                     padding-left: 7px !important;
                     padding-right: 7px !important;
                 }
-
-
             }
         `;
         document.head.appendChild(style);

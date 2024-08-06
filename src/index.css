@@ -7,6 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #10486c;
+  color: white;
 }
 
 code {
@@ -14,28 +16,27 @@ code {
     monospace;
 }
 
-/* Ensure the whole survey background is blue */
-body, .sv_body, .sv_complete, .sv-container-modern {
-  background-color: #10486c !important; /* or any shade of blue you prefer */
+.sv-root-modern {
+  background-color: transparent !important;
   color: white !important;
-  margin: 0;
-  height: 100vh;
- 
+}
+
+.sv_body {
+  background-color: transparent;
 }
 
 /* Center the completion message text */
 .sv_complete_text {
-  font-size: 45px !important;
-  font-weight: bold !important;
-  color: white !important;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
   text-align: center;
   margin-top: 20%;
-  
 }
 
 @media (max-width: 600px) {
   .sv_complete_text {
-      font-size: 30px !important; /* Adjust the font size as needed */
-      margin-top: 10px !important; /* Adjust the top margin as needed */
+    font-size: 30px;
+    margin-top: 10px;
   }
 }
