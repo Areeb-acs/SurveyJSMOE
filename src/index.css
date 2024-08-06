@@ -29,13 +29,13 @@ body, .sv_body, .sv_complete, .sv-container-modern {
   font-weight: bold !important;
   color: white !important;
   text-align: center;
-  margin-top: 20%;
-  
+  margin-top: 15rem !important; /* Adjust the top margin as needed */
+
 }
 
 @media (max-width: 600px) {
   .sv_complete_text {
       font-size: 30px !important; /* Adjust the font size as needed */
-      margin-top: 10px !important; /* Adjust the top margin as needed */
+      margin-top: 50% !important; /* Adjust the top margin as needed */
   }
 }
