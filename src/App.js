@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.css';
-import SurveyComponent from './SurveyComponent';
+import React from "react";
+import SurveyComponent from "./SurveyComponent";
+import ErrorBoundary from "./ErrorBoundary";
 
 function App() {
   return (
     <div className="App">
-      <SurveyComponent />
-      
+      <ErrorBoundary>
+        <SurveyComponent />
+      </ErrorBoundary>
     </div>
   );
 }
