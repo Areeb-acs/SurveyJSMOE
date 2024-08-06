@@ -25,10 +25,17 @@ body, .sv_body, .sv_complete, .sv-container-modern {
 
 /* Center the completion message text */
 .sv_complete_text {
-  font-size: 55px !important;
+  font-size: 45px !important;
   font-weight: bold !important;
   color: white !important;
   text-align: center;
   margin-top: 20%;
   
+}
+
+@media (max-width: 600px) {
+  .sv_complete_text {
+      font-size: 30px !important; /* Adjust the font size as needed */
+      margin-top: 10px !important; /* Adjust the top margin as needed */
+  }
 }
