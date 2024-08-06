@@ -6,7 +6,7 @@ import { themeJson } from "./theme";
 import "./index.css";
 import { json as surveyData } from "./json";
 
-function SurveyComponent() {
+const SurveyComponent = React.memo(function SurveyComponent() {
     const surveyJson = {
         "surveyPostId": "4535b0cb-799a-4672-a8c1-8028575efb4e",
         ...surveyData,
@@ -99,6 +99,6 @@ function SurveyComponent() {
     });
 
     return <Survey model={survey} />;
-}
+});
 
 export default SurveyComponent;
