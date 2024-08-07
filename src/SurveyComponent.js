@@ -12,16 +12,13 @@ function SurveyComponent() {
         ...surveyData,
         "completedHtml": "<div class='sv_complete_text'>شكراً لك على إكمال الاستبيان!</div>"
     };
+
     React.useEffect(() => {
         const style = document.createElement('style');
         style.textContent = `
             .sd-root-modern {
                 direction: rtl;
             }
-
-   
-
-    
             @media (min-width: 620px) {
                 h3.sd-title {
                     position: relative;
@@ -36,15 +33,22 @@ function SurveyComponent() {
                     left: -100%;
                     top: -25%;
                 }
-
                 .sv-ranking-item,
                 .sv-ranking-item__content {
                     padding-left: 7px !important;
                     padding-right: 7px !important;
                 }
+            }
 
+            /* Custom styles to always show the drag-and-drop icon */
+            .sv-ranking-item__icon {
+                visibility: visible !important;
+                opacity: 1 !important;
+                background-color: white;
 
             }
+
+
         `;
         document.head.appendChild(style);
     
