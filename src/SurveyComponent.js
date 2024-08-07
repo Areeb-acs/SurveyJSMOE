@@ -19,6 +19,13 @@ function SurveyComponent() {
             .sd-root-modern {
                 direction: rtl;
             }
+                
+            .sv-ranking-item__icon-container svg {
+                width: 24px !important;
+                height: 20px !important ;
+            }
+
+
             @media (min-width: 620px) {
                 h3.sd-title {
                     position: relative;
@@ -44,7 +51,8 @@ function SurveyComponent() {
             .sv-ranking-item__icon {
                 visibility: visible !important;
                 opacity: 1 !important;
-                background-color: white;
+                background-color: white !important;
+        
 
             }
 
