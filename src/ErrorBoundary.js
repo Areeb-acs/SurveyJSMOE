@@ -23,11 +23,6 @@ class ErrorBoundary extends Component {
       return (
         <div>
           <h1>Something went wrong.</h1>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo ? this.state.errorInfo.componentStack : null}
-          </details>
         </div>
       );
     }
