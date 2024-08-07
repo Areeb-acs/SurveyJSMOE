@@ -212,7 +212,7 @@ export const json = {
           "choicesFromQuestionMode": "selected",
           "maxSelectedChoices": 15,
           "minSelectedChoices": 10,
-          "selectToRankEnabled": true,
+          "selectToRankEnabled": false,
           "selectToRankEmptyRankedAreaText": {
             "ar": " الخيارات المراد ترتيبها"
           }
@@ -294,7 +294,7 @@ export const json = {
           "choicesFromQuestionMode": "selected",
           "maxSelectedChoices": 15,
           "minSelectedChoices": 10,
-          "selectToRankEnabled": true,
+          "selectToRankEnabled": false,
           "selectToRankEmptyRankedAreaText": {
             "ar": " الخيارات المراد ترتيبها"
           }
