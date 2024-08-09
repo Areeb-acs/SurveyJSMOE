@@ -1,7 +1,7 @@
 import React from "react";
-import { Model, surveyLocalization, StylesManager } from '@areeb297/survey-js/build/survey-core';
-import { Survey } from '@areeb297/survey-js/build/survey-react-ui';
-import '@areeb297/survey-js/build/survey-react/defaultV2.min.css';
+import { Model, surveyLocalization, StylesManager } from '@areeb297/survey-js/survey-core';
+import { Survey } from '@areeb297/survey-js/survey-react-ui';
+import '@areeb297/survey-js/defaultV2.min.css';
 import { themeJson } from "./theme";
 import "./index.css";
 import { json as surveyData } from "./json";
