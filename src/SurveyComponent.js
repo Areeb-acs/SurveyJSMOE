@@ -65,6 +65,8 @@ function SurveyComponent() {
         };
     }, []);
 
+    // Update
+
     StylesManager.applyTheme("defaultV2");
 
     surveyLocalization.defaultLocale = "ar";
