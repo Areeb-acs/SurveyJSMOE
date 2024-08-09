@@ -1,7 +1,7 @@
 import React from "react";
-import { Model, surveyLocalization, StylesManager } from "survey-core";
-import { Survey } from "survey-react-ui";
-import "survey-core/defaultV2.min.css";
+import { Model, surveyLocalization, StylesManager } from '@areeb297/survey-js/survey-core';
+import { Survey } from '@areeb297/survey-js/survey-react-ui';
+import '@areeb297/survey-js/defaultV2.min.css';
 import { themeJson } from "./theme";
 import "./index.css";
 import { json as surveyData } from "./json";
@@ -20,10 +20,10 @@ function SurveyComponent() {
                 direction: rtl;
             }
                 
-            .sv-ranking-item__icon-container svg {
-                width: 24px !important;
-                height: 20px !important ;
-            }
+            // .sv-ranking-item__icon-container svg {
+            //     width: 24px !important;
+            //     height: 20px !important ;
+            // }
 
 
             @media (min-width: 620px) {
@@ -48,13 +48,13 @@ function SurveyComponent() {
             }
 
             /* Custom styles to always show the drag-and-drop icon */
-            .sv-ranking-item__icon {
-                visibility: visible !important;
-                opacity: 1 !important;
-                background-color: white !important;
+            // .sv-ranking-item__icon {
+            //     visibility: visible !important;
+            //     opacity: 1 !important;
+            //     background-color: white !important;
         
 
-            }
+            // }
 
 
         `;
