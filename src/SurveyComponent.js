@@ -58,6 +58,10 @@ function SurveyComponent() {
 
     surveyLocalization.defaultLocale = "ar";
     surveyLocalization.locales["ar"] = {
+        tagboxDoneButtonText: "موافق",
+        tagboxCancelButtonText: "إلغاء",
+        okButton: "موافق",
+        cancelButton: "إلغاء",
         pagePrevText: "السابق",
         pageNextText: "التالي",
         completeText: "إرسال البيانات",
@@ -191,7 +195,78 @@ function SurveyComponent() {
         xhr.send(JSON.stringify(sender.data));
     });
 
+
+// Function to fix OK button behavior
+const fixTagboxOkButton = (question) => {
+    const updateOkButton = () => {
+      const okButton = document.querySelector('#sv-dropdown-done-button button');
+      if (okButton) {
+        const selectedItems = question.value || [];
+        const isEnabled = selectedItems.length > 0;
+        
+        okButton.disabled = !isEnabled;
+        okButton.style.pointerEvents = isEnabled ? 'auto' : 'none';
+        okButton.style.opacity = isEnabled ? '1' : '0.5';
+        
+        if (isEnabled) {
+          okButton.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            question.dropdownListModel.popupModel.isVisible = false;
+          };
+        } else {
+          okButton.onclick = null;
+        }
+      }
+    };
+  
+    // Initial update
+    updateOkButton();
+  
+    // Update on value change
+    question.valueChangedCallback = () => {
+      updateOkButton();
+    };
+  
+    // Use MutationObserver to catch DOM changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          updateOkButton();
+        }
+      });
+    });
+  
+    observer.observe(document.body, { childList: true, subtree: true });
+  };
+  
+  // Apply the fix to each tagbox question
+  survey.onAfterRenderQuestion.add((sender, options) => {
+    if (options.question.getType() === "tagbox") {
+      fixTagboxOkButton(options.question);
+    }
+  });
+      
     return <Survey model={survey} />;
 }
-
+    // Additional setup to ensure Arabic text persists
+    document.addEventListener('DOMContentLoaded', () => {
+        const mutationObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'childList') {
+            const addedNodes = mutation.addedNodes;
+            addedNodes.forEach((node) => {
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                const okButtons = node.querySelectorAll('.sv-popup__button--done, .sv-tagbox__done-button');
+                const cancelButtons = node.querySelectorAll('.sv-popup__button--cancel, .sv-tagbox__cancel-button');
+                okButtons.forEach(button => button.textContent = "موافق");
+                cancelButtons.forEach(button => button.textContent = "إلغاء");
+                }
+            });
+            }
+        });
+        });
+    
+        mutationObserver.observe(document.body, { childList: true, subtree: true });
+    });
 export default SurveyComponent;
