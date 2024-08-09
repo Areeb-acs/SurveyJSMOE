@@ -86,8 +86,7 @@ function SurveyComponent() {
         requiredInAllRowsError: "يرجى الإجابة على الأسئلة في جميع الصفوف",
         eachRowUniqueError: "يجب أن يكون لكل صف قيمة فريدة.",
         numericError: "يجب أن تكون القيمة رقمية.",
-        minError: "يجب ألا تقل القيمة عن {0}",
-        maxError: "يجب ألا تزيد القيمة عن {0}",
+   
         textMinLength: "الرجاء إدخال ما لا يقل عن {0} حروف",
         textMaxLength: "الرجاء إدخال أقل من {0} حروف",
         textMinMaxLength: "يرجى إدخال أكثر من {0} وأقل من {1} حروف",
