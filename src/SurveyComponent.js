@@ -12,7 +12,7 @@ function SurveyComponent() {
         ...surveyData,
         "completedHtml": "<div class='sv_complete_text'>شكراً لك على إكمال الاستبيان!</div>"
     };
-
+//
     React.useEffect(() => {
         const style = document.createElement('style');
         style.textContent = `
