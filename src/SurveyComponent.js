@@ -1,7 +1,7 @@
 import React from "react";
 import { Model, surveyLocalization, StylesManager } from '@areeb297/survey-js/build/survey-core';
 import { Survey } from '@areeb297/survey-js/build/survey-react-ui';
-import '@areeb297/survey-js/defaultV2.min.css';
+// import '@areeb297/survey-js/defaultV2.min.css';
 import { themeJson } from "./theme";
 import "./index.css";
 import { json as surveyData } from "./json";
@@ -67,7 +67,7 @@ function SurveyComponent() {
 
     // Update
 
-    StylesManager.applyTheme("defaultV2");
+    // StylesManager.applyTheme("defaultV2");
 
     surveyLocalization.defaultLocale = "ar";
     surveyLocalization.locales["ar"] = {
