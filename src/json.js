@@ -192,7 +192,7 @@ export const json = {
           ],
           "maxSelectedChoices": 15,
           "minSelectedChoices": 10,
-          "allowClear": false,
+          "allowClear": true,
           "hideSelectedItems": true
         },
         {
@@ -274,7 +274,7 @@ export const json = {
           ],
           "maxSelectedChoices": 15,
           "minSelectedChoices": 10,
-          "allowClear": false,
+          "allowClear": true,
           "hideSelectedItems": true
         },
         {
