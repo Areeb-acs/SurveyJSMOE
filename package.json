@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "npm install survey-core"
+    "postinstall": "npm install survey-core@1.11.12"
 
   },
   "eslintConfig": {
