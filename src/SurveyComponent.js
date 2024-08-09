@@ -83,6 +83,15 @@ function SurveyComponent() {
         requiredError: "الرجاء الإجابة على السؤال.",
         requiredErrorFormat: "الرجاء إدخال التنسيق الصحيح.",
         numericError: "يجب أن تكون القيمة رقمية.",
+        savingData: "يتم حفظ النتائج على الخادم ...",
+        savingDataSuccess: "تم حفظ النتائج بنجاح!",
+        selectToRankEmptyRankedAreaText: "يتم ترتيب جميع الخيارات",
+        selectToRankEmptyUnrankedAreaText: "قم بسحب وإسقاط الخيارات هنا لترتيبها",
+        filterStringPlaceholder: "اكتب للبحث...",
+        ratingOptionsCaption: "اختار...",
+        ok: "موافق",
+        cancel: "إلغاء الأمر",
+        placeholder: "...اختر"
         // ... (rest of your translations)
     };
 
